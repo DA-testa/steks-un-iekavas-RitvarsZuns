@@ -29,7 +29,7 @@ def find_mismatch(text):
 
 def main():
     choice = input()
-    if choice == "F":
+    if choice in "F":
         os.chdir('/Users/Ricis/github-classroom/DA-testa/steks-un-iekavas-RitvarsZuns/test')
         file_names = ["0", "1", "2", "3", "4", "5",]
         for file_name in file_names:
@@ -37,7 +37,7 @@ def main():
                 text = f.readline().strip()
                 mismatch = find_mismatch(text)
                 print(mismatch)
-    elif choice == "I":
+    elif choice in "I":
         text = input()
         mismatch = find_mismatch(text)
         print(mismatch)
