@@ -36,7 +36,7 @@ def main():
             with open(file_name, 'r') as f:
                 text = f.readline().strip()
                 mismatch = find_mismatch(text)
-                print(f"{mismatch}")
+                print(mismatch)
     elif choice == "I":
         text = input()
         mismatch = find_mismatch(text)
