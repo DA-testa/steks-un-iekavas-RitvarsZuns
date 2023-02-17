@@ -1,6 +1,7 @@
 # python3
 
 from collections import namedtuple
+import os
 
 Bracket = namedtuple("Bracket", ["char", "position"])
 
@@ -27,10 +28,22 @@ def find_mismatch(text):
 
 
 def main():
-    text = input()
-    mismatch = find_mismatch(text)
-    # Printing answer, write your code here
-    print(mismatch)
+    choice = input()
+    if choice == "F":
+        os.chdir('/Users/Ricis/github-classroom/DA-testa/steks-un-iekavas-RitvarsZuns/test')
+        file_names = ["0", "1", "2", "3", "4", "5",]
+        for file_name in file_names:
+            with open(file_name, 'r') as f:
+                text = f.readline().strip()
+                mismatch = find_mismatch(text)
+                print(f"{file_name}: {mismatch}")
+    elif choice == "I":
+        text = input()
+        mismatch = find_mismatch(text)
+        print(mismatch)
+    else:
+        print("Invalid choice, please try again.")
+
 
 
 if __name__ == "__main__":
