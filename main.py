@@ -42,10 +42,7 @@ def main():
     elif "I" in choice:
             text = input()
             mismatch = find_mismatch(text)
-            if mismatch == "Success":
-                print("Success")
-            else:
-                print(mismatch)
+            print(mismatch)
     else:
         print("Invalid choice, please try again.")
 
